@@ -81,21 +81,79 @@
     <div class="mt-auto pt-8 pb-12 bg-brand-black relative z-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
              <div class="border-t border-white/10 pt-8">
-                <p class="text-center sm:text-left text-sm font-semibold text-gray-400 mb-6 uppercase tracking-wider">
-                    Trusted by the world's fastest growing startups
+                <p class="text-left text-lg font-semibold text-white mb-8 tracking-wide">
+                    Trusted by the world's fastest growing startups and established brands.
                 </p>
-                <div class="grid grid-cols-2 gap-8 md:grid-cols-6 lg:grid-cols-5 opacity-50 grayscale hover:grayscale-0 transition-all duration-500 hover:opacity-100">
-                    <div class="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
-                        <span class="text-2xl font-heading font-bold text-white">Trainual</span>
-                    </div>
-                    <div class="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
-                         <span class="text-2xl font-mono font-bold text-white">PrograMetrix</span>
-                    </div>
-                    <div class="col-span-1 flex justify-center items-center md:col-span-2 lg:col-span-1">
-                         <span class="text-2xl font-serif italic text-white">elm</span>
-                    </div>
-                    <div class="col-span-1 flex justify-center items-center md:col-span-3 lg:col-span-1">
-                         <span class="text-2xl font-sans font-black text-white">Salesloft.</span>
+                
+                <div class="relative w-full overflow-hidden group">
+                    <!-- Gradient masks for smooth fade -->
+                    <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-brand-black to-transparent z-10"></div>
+                    <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-brand-black to-transparent z-10"></div>
+
+                    <div class="flex whitespace-nowrap group-hover:[animation-play-state:paused]">
+                        <!-- Marquee Content (Repeated twice for seamless loop) -->
+                        <div class="flex items-center space-x-16 animate-marquee">
+                            <!-- Logo 1: 7-Eleven Style -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                               <span class="text-3xl font-black text-white font-sans tracking-tight">7<span class="text-brand-lime">ELEVEn</span></span>
+                            </div>
+                             <!-- Logo 2: Meltwater Style -->
+                             <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-2xl font-bold text-white font-mono flex items-center gap-2">
+                                    <span class="text-3xl text-brand-lime">&lt;O&gt;</span> Meltwater
+                                </span>
+                            </div>
+                            <!-- Logo 3: Yahoo Style -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-3xl font-black italic text-white font-serif">yahoo<span class="text-brand-lime">!</span></span>
+                            </div>
+                            <!-- Logo 4: SproutSocial Style -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-2xl font-bold text-white font-sans tracking-tight">sprout<span class="font-light">social</span></span>
+                            </div>
+                            <!-- Logo 5: Trainual Style -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-3xl font-heading font-black text-white cursive">Trainual</span>
+                            </div>
+                            <!-- Logo 6: PrograMetrix Style -->
+                             <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-xl font-mono text-white tracking-widest uppercase">PrograMetrix</span>
+                            </div>
+                            <!-- Spacer to ensure smooth gap -->
+                             <div class="w-8"></div>
+                        </div>
+
+                        <!-- Duplicate for Loop -->
+                        <div class="flex items-center space-x-16 animate-marquee" aria-hidden="true">
+                            <!-- Logo 1 -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                               <span class="text-3xl font-black text-white font-sans tracking-tight">7<span class="text-brand-lime">ELEVEn</span></span>
+                            </div>
+                             <!-- Logo 2 -->
+                             <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-2xl font-bold text-white font-mono flex items-center gap-2">
+                                    <span class="text-3xl text-brand-lime">&lt;O&gt;</span> Meltwater
+                                </span>
+                            </div>
+                            <!-- Logo 3 -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-3xl font-black italic text-white font-serif">yahoo<span class="text-brand-lime">!</span></span>
+                            </div>
+                            <!-- Logo 4 -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-2xl font-bold text-white font-sans tracking-tight">sprout<span class="font-light">social</span></span>
+                            </div>
+                            <!-- Logo 5 -->
+                            <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-3xl font-heading font-black text-white cursive">Trainual</span>
+                            </div>
+                            <!-- Logo 6 -->
+                             <div class="flex items-center justify-center opacity-60 hover:opacity-100 transition-all duration-300 hover:scale-110 cursor-pointer">
+                                <span class="text-xl font-mono text-white tracking-widest uppercase">PrograMetrix</span>
+                            </div>
+                            <!-- Spacer -->
+                             <div class="w-8"></div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -50,7 +50,7 @@
     <link href="https://fonts.bunny.net/css?family=instrument-sans:400,500,600,700" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
     <!-- Tailwind CSS -->
@@ -69,7 +69,7 @@
                     },
                     fontFamily: {
                         sans: ['Instrument Sans', 'sans-serif'],
-                        heading: ['Bricolage Grotesque', 'sans-serif'],
+                        heading: ['"Bricolage Grotesque"', 'sans-serif'],
                     },
                     animation: {
                         'marquee': 'marquee 25s linear infinite',
@@ -107,9 +107,9 @@
             @yield('content')
         </main>
         
-        <footer class="bg-white dark:bg-gray-800 shadow mt-auto">
+        <footer class="bg-brand-black border-t border-white/10 shadow mt-auto">
             <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                <p class="text-center text-gray-500 dark:text-gray-400 text-sm">
+                <p class="text-center text-gray-500 text-sm">
                     &copy; {{ date('Y') }} GraphicGuru. All rights reserved.
                 </p>
             </div>
