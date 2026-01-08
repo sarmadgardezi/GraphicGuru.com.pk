@@ -19,6 +19,13 @@
             darkMode: 'class',
             theme: {
                 extend: {
+                    colors: {
+                        brand: {
+                            lime: '#dfff00', // The bright lime/yellow from the reference
+                            black: '#0a0a0a',
+                            dark: '#121212'
+                        }
+                    },
                     fontFamily: {
                         sans: ['Instrument Sans', 'sans-serif'],
                     },
@@ -32,14 +39,11 @@
 
     <!-- Dark Mode Script -->
     <script>
-        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+        // Force dark mode logic or just default to dark for this design
+        document.documentElement.classList.add('dark');
     </script>
 </head>
-<body class="font-sans antialiased bg-gray-50 text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300">
+<body class="font-sans antialiased bg-brand-black text-white selection:bg-brand-lime selection:text-black">
     <div class="min-h-screen flex flex-col">
         @include('components.navbar')
 
