@@ -9,57 +9,65 @@
     </div>
 
     <!-- Stats Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
         <!-- Total Users Card -->
-        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 relative overflow-hidden group hover:shadow-md transition-shadow">
-            <div class="flex justify-between items-start">
-                <div>
-                    <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Total Users</h3>
-                    <p class="text-4xl font-bold text-gray-800 mt-2">{{ number_format($stats['total_users']) }}</p>
-                </div>
-                <div class="p-3 bg-blue-50 rounded-lg text-blue-600">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path></svg>
-                </div>
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Total Users</h3>
+                <p class="text-3xl font-bold text-gray-800 mt-2">{{ number_format($stats['total_users']) }}</p>
             </div>
-            <div class="mt-4 flex items-center text-sm text-gray-600">
-                <span class="text-green-500 font-medium flex items-center mr-2">
-                    <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path></svg>
-                    Active
-                </span>
-                <span>Registered members</span>
+            <div class="mt-4 flex items-center text-sm text-green-600">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                <span>Registered counts</span>
             </div>
         </div>
 
-        <!-- Admins Card -->
-        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 relative overflow-hidden group hover:shadow-md transition-shadow">
-            <div class="flex justify-between items-start">
-                <div>
-                    <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Administrators</h3>
-                    <p class="text-4xl font-bold text-gray-800 mt-2">{{ number_format($stats['admins']) }}</p>
-                </div>
-                <div class="p-3 bg-purple-50 rounded-lg text-purple-600">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                </div>
+        <!-- Total Admins Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Total Admins</h3>
+                <p class="text-3xl font-bold text-gray-800 mt-2">{{ number_format($stats['admins']) }}</p>
             </div>
-            <div class="mt-4 text-sm text-gray-600">
-                Authorized personnel
+            <div class="mt-4 flex items-center text-sm text-purple-600">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                <span>Privileged accounts</span>
+            </div>
+        </div>
+
+        <!-- Total Posts Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Total Posts</h3>
+                <p class="text-3xl font-bold text-gray-800 mt-2">{{ number_format($stats['total_posts']) }}</p>
+            </div>
+            <div class="mt-4 flex items-center text-sm text-blue-600">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"></path></svg>
+                <span>All blog entries</span>
             </div>
         </div>
         
-        <!-- Placeholder for Logic -->
-        <div class="bg-gradient-to-br from-blue-600 to-indigo-700 rounded-xl shadow-sm p-6 text-white relative overflow-hidden">
-             <div class="relative z-10">
-                <h3 class="text-white text-opacity-80 text-sm font-medium uppercase tracking-wider">System Status</h3>
-                <p class="text-2xl font-bold mt-2">Operational</p>
-                <div class="mt-4">
-                     <a href="{{ route('admin.users.index') }}" class="inline-flex items-center text-sm font-medium text-white hover:text-blue-100 transition-colors">
-                        Manage Users <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
-                </div>
-             </div>
-             <div class="absolute right-0 bottom-0 opacity-10 transform translate-x-1/4 translate-y-1/4">
-                <svg class="w-40 h-40" fill="currentColor" viewBox="0 0 24 24"><path d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-             </div>
+        <!-- Published Posts Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Published</h3>
+                <p class="text-3xl font-bold text-gray-800 mt-2">{{ number_format($stats['published_posts']) }}</p>
+            </div>
+            <div class="mt-4 flex items-center text-sm text-green-600">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Live on site</span>
+            </div>
+        </div>
+
+        <!-- Draft Posts Card -->
+        <div class="bg-white rounded-xl shadow-sm p-6 border border-gray-100 flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div>
+                <h3 class="text-gray-500 text-sm font-medium uppercase tracking-wider">Drafts</h3>
+                <p class="text-3xl font-bold text-gray-800 mt-2">{{ number_format($stats['draft_posts']) }}</p>
+            </div>
+            <div class="mt-4 flex items-center text-sm text-amber-600">
+                <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path></svg>
+                <span>Work in progress</span>
+            </div>
         </div>
     </div>
 

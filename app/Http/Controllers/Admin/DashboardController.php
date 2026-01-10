@@ -14,6 +14,9 @@ class DashboardController extends Controller
             'total_users' => User::count(),
             'admins' => User::where('is_admin', true)->count(),
             'recent_users' => User::latest()->take(5)->get(),
+            'total_posts' => \App\Models\Post::count(),
+            'published_posts' => \App\Models\Post::where('status', 'published')->count(),
+            'draft_posts' => \App\Models\Post::where('status', 'draft')->count(),
         ];
 
         return view('admin.dashboard', compact('stats'));
